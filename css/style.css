@@ -135,23 +135,26 @@ body{
 
 .achievements-createx {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 20px;
+	column-gap: 140px;
+	row-gap: 30px;
 }
-
-.achievements-createx__circle {
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background-color: #FF3F3A;
-}
-
 .item-achievements {
 	display: flex;
 	align-items: center;
 	gap: 12px;
+	position: relative;
+}
+.item-achievements:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -66px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #FF3F3A;
 }
 .item-achievements__value {
 	font-weight: 900;
